@@ -3,6 +3,151 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.zhangyuanke.helloandroid.Module.HA1UI.HA1Layout">
+    tools:context="com.example.zhangyuanke.helloandroid.Module.HA1UI.HA1Layout"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="button1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="button2" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="button3" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <Button
+            android:id="@+id/ha1_layout_button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="button3"
+            android:layout_centerInParent="true"
+            />
+        <Button
+            android:id="@+id/ha1_layout_button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ha1_layout_button3"
+            android:layout_toLeftOf="@id/ha1_layout_button3"
+            android:text="button1"
+            />
+        <Button
+            android:id="@+id/ha1_layout_button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ha1_layout_button3"
+            android:layout_toRightOf="@id/ha1_layout_button3"
+            android:text="button2"
+            />
+        <Button
+            android:id="@+id/ha1_layout_button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ha1_layout_button3"
+            android:layout_toLeftOf="@id/ha1_layout_button3"
+            android:text="button4"
+            />
+        <Button
+            android:id="@+id/ha1_layout_button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ha1_layout_button3"
+            android:layout_toRightOf="@id/ha1_layout_button3"
+            android:text="button5"
+            />
+
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:layout_gravity="right"
+            android:text="frame button1"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/apple_pic"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:text="frame button2"
+            />
+
+    </FrameLayout>
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1"
+        >
+
+            <TableRow>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:text="Account:"
+                    />
+                <EditText
+                    android:layout_height="wrap_content"
+                    android:hint="Input your Account"
+                    />
+            </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="Password:"
+                />
+            <EditText
+                android:layout_height="wrap_content"
+                />
+        </TableRow>
+        <TableRow>
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:text="Login"
+                />
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="button1"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="button2"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="button3"
+        />
 
 </LinearLayout>
