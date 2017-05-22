@@ -3,10 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.zhangyuanke.helloandroid.MainActivity">
+    tools:context="com.example.zhangyuanke.helloandroid.Module.HA1UI.HA1UIActivity">
 
     <ListView
-        android:id="@+id/main_list_view"
+        android:id="@+id/ha1_list_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></ListView>
 
