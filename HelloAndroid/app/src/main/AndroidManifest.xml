@@ -32,6 +32,25 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.zhangyuanke.helloandroid.Tools.BaseActivity" />
         </activity>
+        <activity
+            android:name=".Module.HA1UI.HA1SimpleUI"
+            android:label="@string/title_activity_ha1_simple_ui"
+            android:parentActivityName=".Tools.BaseActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.zhangyuanke.helloandroid.Tools.BaseActivity" />
+        </activity>
+        <activity
+            android:name=".Module.HA1UI.HA1CustomUI"
+            android:label="@string/title_activity_ha1_custom_ui"
+            android:parentActivityName=".Tools.BaseActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.zhangyuanke.helloandroid.Tools.BaseActivity" />
+        </activity>
+        <activity
+            android:name=".Module.HA1UI.HA1ProjectUITest"
+            android:label="@string/title_activity_ha1_project_uitest"></activity>
     </application>
 
 </manifest>

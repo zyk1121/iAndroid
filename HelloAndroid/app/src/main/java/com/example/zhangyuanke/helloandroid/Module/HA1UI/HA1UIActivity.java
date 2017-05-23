@@ -21,7 +21,8 @@ public class HA1UIActivity extends BaseActivity {
             "1.Android布局",
             "2.简单控件",
             "3.代码布局",
-            "4.自定义控件"
+            "4.自定义控件",
+            "5.控件布局项目"
     };
 
     @Override
@@ -59,10 +60,16 @@ public class HA1UIActivity extends BaseActivity {
                 intent = new Intent(HA1UIActivity.this, HA1Layout.class);
                 break;
             case 1:
+                intent = new Intent(HA1UIActivity.this, HA1SimpleUI.class);
                 break;
             case 2:
+                intent = new Intent(HA1UIActivity.this, HA1Layout.class);
                 break;
             case 3:
+                intent = new Intent(HA1UIActivity.this, HA1CustomUI.class);
+                break;
+            case 4:
+                intent = new Intent(HA1UIActivity.this, HA1ProjectUITest.class);
                 break;
             default:
                 break;
@@ -71,6 +78,23 @@ public class HA1UIActivity extends BaseActivity {
             startActivity(intent);
         }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // 测试代码

@@ -2,4 +2,7 @@
     <string name="app_name">HelloAndroid</string>
     <string name="title_activity_ha1_ui">HA1UIActivity</string>
     <string name="title_activity_ha1_layout">HA1Layout</string>
+    <string name="title_activity_ha1_simple_ui">HA1SimpleUI</string>
+    <string name="title_activity_ha1_custom_ui">HA1CustomUI</string>
+    <string name="title_activity_ha1_project_uitest">HA1ProjectUITest</string>
 </resources>

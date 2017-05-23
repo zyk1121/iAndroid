@@ -5,10 +5,14 @@ import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.zhangyuanke.helloandroid.R;
@@ -358,7 +362,49 @@ btn1.setLayoutParams(lp);
 
 
         // 表格布局
-        
+        TableLayout tableLayout = new TableLayout(this);
+        TableLayout.LayoutParams layout_t = new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT,TableLayout.LayoutParams.WRAP_CONTENT);
+        tableLayout.setLayoutParams(layout_t);
+        tableLayout.setColumnStretchable(1,true);
+
+
+        // tabrow1
+        TableRow tr1 = new TableRow(this);
+//        TableRow.LayoutParams tl1 = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,TableRow.LayoutParams.WRAP_CONTENT);
+
+        TextView tv1 = new TextView(this);
+        tv1.setText("Account:");
+        tr1.addView(tv1);
+
+        EditText et1 = new EditText(this);
+        et1.setHint("请输入账号");
+        tr1.addView(et1);
+        tableLayout.addView(tr1);
+
+        // tabrow2
+        TableRow tr2 = new TableRow(this);
+        TextView tv2 = new TextView(this);
+        tv2.setText("Password:");
+        tr2.addView(tv2);
+
+        EditText et2 = new EditText(this);
+//        et2.setHint("请输入账号");
+        tr2.addView(et2);
+        tableLayout.addView(tr2);
+
+        // tab row 3
+        TableRow tr3 = new TableRow(this);
+
+        Button btn_tr = new Button(this);
+        TableRow.LayoutParams tl_btn = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,TableRow.LayoutParams.WRAP_CONTENT);
+        tl_btn.span = 2;
+        btn_tr.setLayoutParams(tl_btn);
+        btn_tr.setText("登录");
+        tr3.addView(btn_tr);
+        tableLayout.addView(tr3);
+
+        linearLayout.addView(tableLayout);
+
 
         setContentView(linearLayout);
     }
