@@ -5,10 +5,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.example.zhangyuanke.helloandroid.R;
 import com.example.zhangyuanke.helloandroid.Tools.BaseActivity;
+import com.example.zhangyuanke.helloandroid.Tools.HelloAndroidUtil;
+import com.example.zhangyuanke.helloandroid.Tools.LogUtil;
 
 public class HA1UIActivity extends BaseActivity {
 
@@ -24,7 +28,9 @@ public class HA1UIActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ha1_ui);
+//        testUI();
         setupDataAndView();
+
     }
 
     // 设置数据和view
@@ -64,6 +70,27 @@ public class HA1UIActivity extends BaseActivity {
         if (intent != null) {
             startActivity(intent);
         }
+    }
+
+
+// 测试代码
+
+    private void testUI()
+    {
+        // 不同的布局中id可以相同，同一个setContentView布局中的ic不能一样，会被覆盖
+
+        LinearLayout linearLayout = (LinearLayout) getLayoutInflater().inflate(R.layout.activity_ha1_ui,null);
+
+        Button btn3 = new Button(this);
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,LinearLayout.LayoutParams.WRAP_CONTENT);
+        btn3.setLayoutParams(layoutParams);
+        int btn3_id = HelloAndroidUtil.generateViewId();// 返回1
+        LogUtil.d("tag","2222 " + btn3_id);
+        btn3.setId(btn3_id);
+        btn3.setText("btn3");
+        linearLayout.addView(btn3);
+
+        setContentView(linearLayout);
     }
 
 }
