@@ -10,6 +10,8 @@ import android.text.TextPaint;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
 import android.view.View;
+import android.widget.Button;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,6 +40,112 @@ public class HA1SimpleUI extends BaseActivity {
 //            layout.addView(imageView);
 //        }
         testTextView();
+        testButton();
+        testRadioGroup();
+    }
+
+
+    private void testRadioGroup()
+    {
+
+        // http://blog.csdn.net/liuwan1992/article/details/52688408
+        // Android RadioButton设置选中时文字和背景颜色同时改变
+
+
+        //根据ID找到RadioGroup实例
+        RadioGroup group = (RadioGroup)findViewById(R.id.ha1_radio_group);
+        group.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                Toast.makeText(HA1SimpleUI.this,"" + checkedId,Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+    private void testButton()
+    {
+
+
+        Button btn1 = (Button)findViewById(R.id.ha1_button_test1);
+        final Button btn2 = (Button)findViewById(R.id.ha1_button_test2);
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (btn2.getVisibility() == View.VISIBLE) {
+                    btn2.setVisibility(View.INVISIBLE);
+
+                } else {
+
+                    btn2.setVisibility(View.VISIBLE);
+                }
+
+            }
+        });
+        /*
+        视图可以选择隐藏(gone), 可视(visible), 不可视(invisible).
+
+可见(visible):
+XML文件：android:visibility="visible"
+Java代码：view.setVisibility(View.VISIBLE);
+
+不可见(invisible):
+XML文件：android:visibility="invisible"
+Java代码：view.setVisibility(View.INVISIBLE);
+
+隐藏(gone):
+XML文件：android:visibility="gone"
+Java代码：view.setVisibility(View.GONE);
+
+而INVISIBLE和GONE的主要区别是：
+当控件visibility属性为INVISIBLE时，界面保留了view控件所占有的空间；而控件属性为GONE时，界面则不保留view控件所占有的空间。
+
+*/
+
+
+        /*
+        Shape
+        *     <!-- 圆角 -->
+    <corners
+        android:radius="9dp"
+        android:topLeftRadius="2dp"
+        android:topRightRadius="2dp"
+        android:bottomLeftRadius="2dp"
+        android:bottomRightRadius="2dp"/><!-- 设置圆角半径 -->
+
+    <!-- 渐变 -->
+    <gradient
+        android:startColor="@android:color/white"
+        android:centerColor="@android:color/black"
+        android:endColor="@android:color/black"
+        android:useLevel="true"
+        android:angle="45"
+        android:type="radial"
+        android:centerX="0"
+        android:centerY="0"
+        android:gradientRadius="90"/>
+
+    <!-- 间隔 -->
+    <padding
+        android:left="2dp"
+        android:top="2dp"
+        android:right="2dp"
+        android:bottom="2dp"/><!-- 各方向的间隔 -->
+
+    <!-- 大小 -->
+    <size
+        android:width="50dp"
+        android:height="50dp"/><!-- 宽度和高度 -->
+
+    <!-- 填充 -->
+    <solid
+        android:color="@android:color/holo_red_dark"/><!-- 填充的颜色 -->
+
+    <!-- 描边 -->
+    <stroke
+        android:width="2dp"
+        android:color="@android:color/black"
+        android:dashWidth="1dp"
+        android:dashGap="2dp"/>
+        */
     }
 
     private void testTextView()

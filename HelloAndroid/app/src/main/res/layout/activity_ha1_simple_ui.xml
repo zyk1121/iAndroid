@@ -15,6 +15,184 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ff888888" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <CheckBox
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/radiobutton_selector"
+                    android:button="@null"
+                    android:checked="true"/>
+                <CheckBox
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/radiobutton_selector"
+                    android:button="@null"
+                    android:checked="false"/>
+                <CheckBox
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/radiobutton_selector"
+                    android:button="@null"
+                    android:checked="true"/>
+            </LinearLayout>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ff888888" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+               <RadioGroup
+                   android:id="@+id/ha1_radio_group"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal">
+
+                   <RadioButton
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:button="@null"
+                       android:background="@drawable/radiobutton_selector"
+                       />
+                   <RadioButton
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:button="@null"
+                       android:background="@drawable/radiobutton_selector"
+                       />
+                   <RadioButton
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:button="@null"
+                       android:background="@drawable/radiobutton_selector"
+                       />
+                   <RadioButton
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:button="@null"
+                       android:background="@drawable/radiobutton_selector"
+                       />
+
+               </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ff888888" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    android:drawableLeft="@drawable/apple_pic"
+                    android:text="1234"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textSize="25sp"
+                    android:textColor="#000000"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    android:drawableTop="@drawable/icon_withdrawdetail_green_money"
+                    android:text="微信"
+                    />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ff888888" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    style="@style/common_button_style"
+                    android:layout_width="350dp"
+                    android:layout_height="44dp"
+                    android:text="登录"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="58dp">
+                <Button
+                    android:id="@+id/ha1_button_test1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_bt_selector"
+                    />
+                <Button
+                    android:id="@+id/ha1_button_test2"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="123456"
+                    android:background="@drawable/bg_bt_shape"
+                    />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ff888888" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryDark"
+                    android:text="button1"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#ff0000"
+                    android:text="button2"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/icon_bank_add"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_nopassword_selected"
+                    />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ff888888" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
